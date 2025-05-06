@@ -1,0 +1,216 @@
+/* ###### Add Employee Form Styling #########  */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-container > h3 {
+  text-align: center;
+}
+
+[id^="error"]{
+  color: red;
+  margin-top: 3px;
+  font-size: 15px;
+}
+
+#basicTable{
+
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+#advanceTable{
+  padding: 30px;
+
+
+}
+
+#navbar-container {
+  border: 2px solid #337ab7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #337ab7;
+  color: white;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+  padding: 5px;
+}
+
+.container {
+  border: 1px solid #337ab7;
+  margin: 0 50px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.row:nth-child(6) {
+  /* display: flex; */
+  align-items: normal;
+}
+
+.col {
+  margin: 5px;
+}
+
+.col:nth-child(1) {
+  flex: 1;
+  text-align: end;
+}
+
+.col:nth-child(2) {
+  flex: 4;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+}
+
+[type='radio'],
+[type='checkbox'] {
+  width: fit-content;
+}
+
+button {
+  background-color: #337ab7;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: #337ab7;
+  margin-right: 10px;
+}
+
+/* ###### Basic Table Styling #########  */
+
+table,
+th,
+td {
+  border: 1px solid lightgrey;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 25px;
+}
+
+.container-basic-table {
+  /* need to comment this code inorder to apply overflow auto */
+  /* display: flex; */
+
+  overflow: auto;
+}
+
+.container-basic-table > table {
+  width: 96%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* advnace table */
+
+[value='Delete all'] {
+  cursor: pointer;
+  background-color: red;
+}
+
+/* ###### searchBox #########  */
+
+#searchBox {
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+
+#searchBox > input {
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+[for='sortEntries'] {
+  vertical-align: bottom;
+}
+
+/* error Handling */
+
+[class^='error'] {
+  color: red;
+  margin: 5px 0px 0px 5px;
+  font-size: 15px;
+  position: relative;
+}
+
+/*########################## Media Queries starts here ################################# */
+
+/* reference */
+
+/*
+
+         Extra small : <576px
+             Small : ≥576px
+          Medium : ≥768px
+              Large : ≥992px
+            Extra large : ≥1200px
+      */
+@media only screen and (min-width: 1200px) {
+  #adv > tbody > tr:last-child button {
+    margin-top: 5px;
+  }
+
+  /* #adv > tbody > tr:last-child > td {
+    flex-direction: row;
+    justify-content: center;
+  } */
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+  #basic > tbody > tr > td:last-child button {
+    margin-top: 5px;
+  }
+  #adv > tbody > tr:last-child button {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 576px) {
+  #basic > tbody > tr > td:last-child button {
+    margin-top: 5px;
+  }
+  #adv > tbody > tr:last-child button {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #basic > tbody > tr > td:last-child button {
+    margin-top: 5px;
+  }
+  #navbar-container {
+    margin: 0 10px;
+  }
+
+  .container {
+    border: 1px solid #337ab7;
+    margin: 0 10px;
+  }
+
+  .row:nth-child(7) > .col:nth-child(1) {
+    display: none;
+  }
+  .row:nth-child(7) > .col:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .row > .col:nth-child(1) {
+    font-size: 13px;
+  }
+}
+
+/*########################## Media Queries ends here ################################# */
